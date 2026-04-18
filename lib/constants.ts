@@ -521,8 +521,8 @@ export const MILESTONES = [
 ];
 
 export const CONTACT_EMAIL = "contact@golaine.tech";
-export const CONTACT_PHONE = "+221 33 000 00 00";
-export const CONTACT_ADDRESS = "Dakar, Sénégal";
+export const CONTACT_PHONE = "+223 77 77 30 34";
+export const CONTACT_ADDRESS = "Bamako, Mali";
 
-/** Centre carte (Dakar) — à ajuster */
-export const MAP_COORDS: [number, number] = [14.6928, -17.4467];
+/** Centre carte (Bamako) — à ajuster */
+export const MAP_COORDS: [number, number] = [12.6392, -8.0029];
