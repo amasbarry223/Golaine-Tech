@@ -1,5 +1,6 @@
 import ScrollProgress from "@/components/sections/services/ScrollProgress";
 import ServiceList from "@/components/sections/services/ServiceList";
+import SpecialServices from "@/components/sections/services/SpecialServices";
 import { SITE_NAME } from "@/lib/constants";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -46,6 +47,7 @@ export default function ServicesPage() {
       </section>
 
       <ServiceList />
+      <SpecialServices />
 
       <div className="mx-auto max-w-7xl px-4 pb-20 text-center text-sm text-text-muted md:px-8">
         Une question sur une offre ?{" "}

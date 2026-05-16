@@ -15,7 +15,7 @@ import {
   Sparkles,
   Target,
 } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const ABOUT_STATS = [
   { value: "150+", label: "Projets livrés" },
@@ -61,7 +61,7 @@ export default function AProposPage() {
       <section className="relative overflow-hidden border-b border-white/5">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=85"
+            src="/images/hero_innovation_1778890958777.png"
             alt=""
             fill
             priority
@@ -102,7 +102,7 @@ export default function AProposPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 md:gap-16 md:px-8 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 lg:aspect-[5/4]">
             <Image
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=85"
+              src="/images/about_team_1778891950332.png"
               alt="Collaboration et travail d&apos;équipe autour de solutions numériques"
               fill
               className="object-cover"
@@ -322,15 +322,35 @@ export default function AProposPage() {
                     {m.name}
                   </h3>
                   <p className="mt-1 text-sm text-gold/90">{m.role}</p>
-                  {m.linkedin && (
-                    <Link
-                      href={m.linkedin}
-                      className="mt-4 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-text-muted transition-colors hover:border-gold/40 hover:text-gold"
-                      aria-label={`Profil LinkedIn de ${m.name}`}
-                    >
-                      <FaLinkedin className="h-4 w-4" aria-hidden />
-                    </Link>
-                  )}
+                  <div className="mt-4 flex gap-2">
+                    {m.linkedin && (
+                      <Link
+                        href={m.linkedin}
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-text-muted transition-colors hover:border-gold/40 hover:text-gold"
+                        aria-label={`Profil LinkedIn de ${m.name}`}
+                      >
+                        <FaLinkedin className="h-4 w-4" aria-hidden />
+                      </Link>
+                    )}
+                    {m.github && (
+                      <Link
+                        href={m.github}
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-text-muted transition-colors hover:border-gold/40 hover:text-gold"
+                        aria-label={`Profil GitHub de ${m.name}`}
+                      >
+                        <FaGithub className="h-4 w-4" aria-hidden />
+                      </Link>
+                    )}
+                    {m.facebook && (
+                      <Link
+                        href={m.facebook}
+                        className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-text-muted transition-colors hover:border-gold/40 hover:text-gold"
+                        aria-label={`Profil Facebook de ${m.name}`}
+                      >
+                        <FaFacebook className="h-4 w-4" aria-hidden />
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </motion.article>
             ))}
@@ -394,7 +414,7 @@ export default function AProposPage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:grid-cols-2 md:items-center md:gap-16 md:px-8">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 md:order-2">
             <Image
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=85"
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=85"
               alt="Équipe en réunion autour d&apos;une table"
               fill
               className="object-cover"

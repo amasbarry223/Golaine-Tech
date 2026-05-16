@@ -7,7 +7,7 @@ import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 
 const ABOUT_IMAGE =
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=960&q=85";
+  "/images/about_team_1778891950332.png";
 
 const POINTS = [
   "Stratégie produit, design UI/UX et développement web & mobile",

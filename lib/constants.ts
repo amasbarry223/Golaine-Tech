@@ -2,13 +2,16 @@ import type { LucideIcon } from "lucide-react";
 import {
   Brain,
   Code2,
-  Globe,
+  Globe as GlobeIcon,
   GraduationCap,
   Palette,
   Phone,
   Shield,
   Smartphone,
   Wrench,
+  Zap,
+  Star,
+  Flame,
 } from "lucide-react";
 
 export const SITE_NAME = "Golaïne Tech";
@@ -17,10 +20,10 @@ export const SITE_TAGLINE =
 
 export const NAV_LINKS = [
   { href: "/", label: "Accueil" },
-  { href: "/services", label: "Services" },
-  { href: "/projets", label: "Projets" },
   { href: "/a-propos", label: "À propos" },
+  { href: "/services", label: "Services" },
   { href: "/formations", label: "Formations" },
+  { href: "/projets", label: "Projets" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
@@ -46,6 +49,68 @@ export interface ServiceItem {
   bullets: string[];
 }
 
+export interface SpecialServiceItem {
+  slug: string;
+  title: string;
+  name: string;
+  duration: string;
+  description: string;
+  price: string;
+  icon: LucideIcon;
+  features: string[];
+}
+
+export const SPECIAL_SERVICES: SpecialServiceItem[] = [
+  {
+    slug: "djoni-djoni",
+    title: "Offre Express",
+    name: "Djoni Djoni",
+    duration: "2 jours",
+    description:
+      "Une solution ultra-rapide pour vos besoins critiques. Idéal pour une mise en ligne immédiate ou un correctif urgent.",
+    price: "Sur devis",
+    icon: Zap,
+    features: [
+      "Développement éclair",
+      "Priorité critique",
+      "Livrable en 48 heures",
+      "Support haute disponibilité",
+    ],
+  },
+  {
+    slug: "lewrou",
+    title: "Offre Hebdomadaire",
+    name: "Lewrou",
+    duration: "1 semaine",
+    description:
+      "Un accompagnement intensif sur un cycle hebdomadaire pour des projets à exécution rapide.",
+    price: "Sur devis",
+    icon: Star,
+    features: [
+      "Sprint de développement complet",
+      "Tests QA intensifs",
+      "Déploiement en fin de cycle",
+      "Documentation synthétique",
+    ],
+  },
+  {
+    slug: "kaoural",
+    title: "Offre Standard",
+    name: "Kaoural",
+    duration: "Sur mesure",
+    description:
+      "Notre approche classique pour des projets complexes nécessitant une harmonie parfaite.",
+    price: "Sur devis",
+    icon: Flame,
+    features: [
+      "Architecture scalable",
+      "Design UX/UI premium",
+      "Intégrations complexes",
+      "Maintenance incluse",
+    ],
+  },
+];
+
 export const SERVICES: ServiceItem[] = [
   {
     slug: "mobile",
@@ -69,7 +134,7 @@ export const SERVICES: ServiceItem[] = [
     short: "Sites vitrines, plateformes et web apps modernes.",
     description:
       "Expériences web rapides, SEO-friendly et scalables, construites avec les meilleures pratiques front et une architecture claire pour évoluer avec votre croissance.",
-    icon: Globe,
+    icon: GlobeIcon,
     image:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
     tags: ["Next.js", "TypeScript", "Tailwind"],
@@ -119,7 +184,7 @@ export const SERVICES: ServiceItem[] = [
       "Programmes actionnables, ateliers dirigés et supports durables pour accélérer l’adoption des outils et des bonnes pratiques dans votre organisation.",
     icon: GraduationCap,
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
     tags: ["Pédagogie", "Workshops", "Labs"],
     bullets: [
       "Parcours débutant à expert",
@@ -205,36 +270,46 @@ export interface TeamMember {
   role: string;
   image: string;
   linkedin?: string;
+  github?: string;
+  facebook?: string;
 }
 
 export const TEAM: TeamMember[] = [
   {
-    name: "Amadou Diallo",
-    role: "Directeur technique",
+    name: "Mody Saidou Barry",
+    role: "Développeur Full-Stack & Designer UX/UI",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80",
     linkedin: "#",
+    github: "#",
+    facebook: "#",
   },
   {
-    name: "Fatou N’Doye",
-    role: "Lead Design & Produit",
+    name: "Sekou Cissé",
+    role: "Développeur Backend",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
     linkedin: "#",
+    github: "#",
+    facebook: "#",
   },
   {
-    name: "Marc Ouedraogo",
-    role: "Ingénieur IA",
+    name: "Hamadoun Cissé",
+    role: "Directeur Technique & Stratégie",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80",
     linkedin: "#",
+    github: "#",
+    facebook: "#",
   },
   {
-    name: "Aïcha Sow",
-    role: "Chef de projet",
+    name: "Amadou Barry",
+    role: "Ingénieur Cloud & DevOps",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+      "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?w=600&q=80",
     linkedin: "#",
+    github: "#",
+    facebook: "#",
   },
 ];
 
@@ -255,76 +330,64 @@ export interface PortfolioProject {
 export const PROJECTS: PortfolioProject[] = [
   {
     id: "p1",
-    title: "Plateforme e-learning",
-    client: "EduAfrika",
+    title: "Faso-Education",
+    client: "Ministère de l'Éducation",
     category: "Web",
     year: "2025",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80",
-    description:
-      "Parcours pédagogique, suivi des apprenants et analytics pour une adoption massive en moins de 3 mois.",
-    stack: ["Next.js", "Supabase", "Stripe"],
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80",
+    description: "Modernisation du système éducatif malien avec une plateforme e-learning interactive et accessible hors-ligne.",
+    stack: ["Next.js", "Supabase", "Offline-first"],
     url: "https://example.com",
   },
   {
     id: "p2",
-    title: "Super-app services",
-    client: "Nova Logistics",
+    title: "Bamako Express",
+    client: "Express Mali",
     category: "Mobile",
     year: "2025",
-    image:
-      "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80",
-    description:
-      "Application mobile unifiée pour la logistique urbaine avec suivi temps réel et notifications intelligentes.",
-    stack: ["React Native", "Firebase", "Maps"],
+    image: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&q=80",
+    description: "Solution de logistique intelligente pour la livraison urbaine optimisée par IA dans le district de Bamako.",
+    stack: ["React Native", "Google Maps API", "AI Routing"],
   },
   {
     id: "p3",
-    title: "Dashboard analytics",
-    client: "FinEdge",
+    title: "Djigui Finance",
+    client: "Coopérative Djigui",
     category: "Web",
     year: "2024",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    description:
-      "Visualisation décisionnelle et exports automatisés pour les équipes finance.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+    description: "Plateforme de microfinance digitale permettant l'inclusion financière des commerçants des marchés locaux.",
     stack: ["Next.js", "D3", "PostgreSQL"],
   },
   {
     id: "p4",
-    title: "Assistant IA documentaire",
-    client: "Legal Partners",
+    title: "Mali Juris",
+    client: "Cabinet Cissé & Associés",
     category: "IA",
     year: "2024",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
-    description:
-      "Recherche sémantique et résumés conformes sur corpus interne avec traçabilité.",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+    description: "Assistant IA spécialisé dans le droit malien pour faciliter l'accès à l'information juridique des citoyens.",
     stack: ["RAG", "OpenAI", "Python"],
   },
   {
     id: "p5",
-    title: "Design system & refonte",
-    client: "Helios Health",
+    title: "Sante-Tech Mali",
+    client: "ONG Santé Pour Tous",
     category: "Design",
     year: "2024",
-    image:
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80",
-    description:
-      "Refonte UX/UI et bibliothèque de composants pour accélérer les releases produit.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    description: "Système de télémédecine reliant les centres de santé ruraux aux spécialistes des hôpitaux nationaux.",
     stack: ["Figma", "Storybook", "Tokens"],
   },
   {
     id: "p6",
-    title: "App mobile retail",
-    client: "Atlas Retail",
+    title: "Ségou Marché",
+    client: "Groupement Agricole Ségou",
     category: "Mobile",
     year: "2023",
-    image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80",
-    description:
-      "Parcours d’achat omnicanal avec fidélité et paiements mobiles.",
-    stack: ["Flutter", "REST", "Analytics"],
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80",
+    description: "Application mobile de mise en relation directe entre les agriculteurs de la région de Ségou et les acheteurs.",
+    stack: ["AgriTech", "E-commerce", "Mobile App"],
   },
 ];
 

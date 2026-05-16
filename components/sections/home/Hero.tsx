@@ -25,7 +25,7 @@ const SLIDES = [
     subtitle:
       "Stratégie, design et ingénierie pour des produits qui durent et scalent avec vous.",
     image:
-      "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920&q=85",
+      "https://images.unsplash.com/photo-1573163231154-ca20e03079b7?w=1920&q=85",
     accent: "gradient" as const,
   },
   {
@@ -36,7 +36,7 @@ const SLIDES = [
     subtitle:
       "Assistants, workflows et données : nous intégrons l’IA là où le ROI est mesurable.",
     image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=85",
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&q=85",
     accent: "cyan" as const,
   },
   {
@@ -47,7 +47,7 @@ const SLIDES = [
     subtitle:
       "UI/UX orientée conversion, accessibilité et vitesse — du prototype au design system.",
     image:
-      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&q=85",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=85",
     accent: "gold" as const,
   },
   {
@@ -58,7 +58,7 @@ const SLIDES = [
     subtitle:
       "Web, mobile et logiciels métiers : une équipe engagée jusqu’au run et au-delà.",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=85",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=85",
     accent: "green" as const,
   },
 ];

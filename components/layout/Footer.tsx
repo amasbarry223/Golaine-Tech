@@ -13,12 +13,13 @@ import {
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const SOCIALS = [
   { Icon: FaXTwitter, href: "#", label: "X (Twitter)" },
   { Icon: FaLinkedin, href: "#", label: "LinkedIn" },
   { Icon: FaGithub, href: "#", label: "GitHub" },
+  { Icon: FaFacebook, href: "#", label: "Facebook" },
 ] as const;
 
 const FOOTER_SERVICES = SERVICES.slice(0, 6);

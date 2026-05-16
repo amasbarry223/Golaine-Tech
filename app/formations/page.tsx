@@ -22,7 +22,7 @@ export default function FormationsPage() {
       <section className="relative overflow-hidden border-b border-white/5">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=80"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80"
             alt=""
             fill
             priority
