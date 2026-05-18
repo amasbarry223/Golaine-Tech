@@ -313,7 +313,7 @@ export const TEAM: TeamMember[] = [
   },
 ];
 
-export type ProjectCategory = "Web" | "Mobile" | "IA" | "Design";
+export type ProjectCategory = "Web" | "Mobile" | "IA" | "Design" | "Sass";
 
 export interface PortfolioProject {
   id: string;
@@ -389,6 +389,26 @@ export const PROJECTS: PortfolioProject[] = [
     description: "Application mobile de mise en relation directe entre les agriculteurs de la région de Ségou et les acheteurs.",
     stack: ["AgriTech", "E-commerce", "Mobile App"],
   },
+  {
+    id: "p7",
+    title: "Mali-SaaS Facturation",
+    client: "Danaya Distribution",
+    category: "Sass",
+    year: "2025",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    description: "Solution SaaS de facturation et gestion d'inventaire en temps réel développée pour les commerçants de Bamako, intégrée aux moyens de paiement mobile money (Orange Money & Moov Money).",
+    stack: ["Next.js", "PostgreSQL", "Tailwind CSS", "API Mobile Money"],
+  },
+  {
+    id: "p8",
+    title: "Sira ERP",
+    client: "Synergie Group",
+    category: "Sass",
+    year: "2024",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    description: "Logiciel de gestion des ressources humaines et de la paie en mode SaaS, adapté à la législation du travail malienne et de la zone OHADA.",
+    stack: ["TypeScript", "NestJS", "React", "Docker"],
+  },
 ];
 
 export interface Testimonial {
@@ -403,43 +423,43 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t1",
-    name: "Sophie Mensah",
-    role: "COO",
-    company: "BrightScale",
+    name: "Fatoumata Diallo",
+    role: "Directrice des Opérations",
+    company: "Mali Agro-Logistique",
     quote:
-      "Une équipe ultra-rigoureuse : livraison dans les temps, qualité au rendez-vous, et une vraie culture produit.",
+      "Une équipe ultra-rigoureuse : livraison dans les temps, qualité au rendez-vous, et une vraie compréhension des enjeux logistiques maliens.",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=200&q=80",
+      "https://images.unsplash.com/photo-1560457099-64cb8a5eb503?w=200&q=80",
   },
   {
     id: "t2",
-    name: "Ibrahim Kane",
+    name: "Oumar Dembélé",
     role: "Fondateur",
-    company: "Nomad Pay",
+    company: "Danaya Services",
     quote:
-      "Ils ont transformé notre idée en une plateforme fiable, prête pour la montée en charge.",
+      "Ils ont transformé notre idée complexe en une plateforme financière fluide, sécurisée et parfaitement adaptée au marché local.",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80",
+      "https://images.unsplash.com/photo-1584530193960-b4eb6c87081c?w=200&q=80",
   },
   {
     id: "t3",
-    name: "Claire Dubois",
-    role: "Directrice marketing",
-    company: "Lumen Studio",
+    name: "Salimata Coulibaly",
+    role: "Directrice de l'Innovation",
+    company: "Ségou Artisanal",
     quote:
-      "Design premium et animations soignées — nos campagnes convertissent mieux depuis le nouveau site.",
+      "L'attention portée au design et aux micro-animations est exceptionnelle. Nos artisans vendent beaucoup mieux depuis la refonte.",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80",
   },
   {
     id: "t4",
-    name: "Youssef Benali",
-    role: "DSI",
-    company: "Atlas Retail",
+    name: "Moussa Keïta",
+    role: "Responsable IT",
+    company: "Bamako Énergie",
     quote:
-      "Support réactif, documentation claire : exactement ce qu’on attend d’un partenaire long terme.",
+      "Support réactif, écoute attentive et expertise technique inégalée. Exactement le partenaire de long terme dont nous avions besoin.",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+      "https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=200&q=80",
   },
 ];
 

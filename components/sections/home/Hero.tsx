@@ -47,7 +47,7 @@ const SLIDES = [
     subtitle:
       "UI/UX orientée conversion, accessibilité et vitesse — du prototype au design system.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1920&q=85",
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1920&q=85",
     accent: "gold" as const,
   },
   {

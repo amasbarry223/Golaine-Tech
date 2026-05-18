@@ -14,6 +14,7 @@ const FILTERS: Array<ProjectCategory | "Tous"> = [
   "Mobile",
   "IA",
   "Design",
+  "Sass",
 ];
 
 export default function PortfolioGrid() {

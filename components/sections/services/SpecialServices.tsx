@@ -17,7 +17,7 @@ export default function SpecialServices() {
             Nos Offres Spéciales
           </h2>
           <p className="mt-4 text-text-muted max-w-2xl mx-auto">
-            Des formules adaptées à vos contraintes de temps et d'envergure, 
+            Des formules adaptées à vos contraintes de temps et d&apos;envergure, 
             avec la même exigence de qualité.
           </p>
         </div>
